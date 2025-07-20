@@ -459,6 +459,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-around;
+
     }
 
     nav {
@@ -466,6 +467,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+
     }
 
     nav ul {
@@ -492,13 +494,15 @@ footer {
         width: 90% !important;
         float: none;
         box-sizing: border-box;
-        margin-left: 5%;
+        margin: 0%;
     }
 
     #contact {
         flex-direction: column;
         align-items: flex-start;
+        margin: 0%;
         gap: 2rem;
+
     }
 
     #contact-form,
@@ -517,6 +521,8 @@ footer {
         float: none;
         margin-left: 5%;
         box-sizing: border-box;
+        margin: 0%;
+
 
 
     }
@@ -528,6 +534,8 @@ footer {
 
         margin-left: 5%;
         box-sizing: border-box;
+        margin: 0%;
+
     }
 
     /* .sdl,
@@ -541,6 +549,8 @@ footer {
 
     main {
         padding: 1rem;
+        margin: 0%;
+
     }
 
     footer {
