@@ -455,100 +455,134 @@ footer {
 @media screen and (max-width: 500px) {
     header {
         width: 100%;
-        height: auto;
+        height: 8vh;
         display: flex;
         align-items: center;
         justify-content: space-around;
 
     }
 
+    header h1 {
+        font-size: 1rem;
+    }
+
     nav {
-        width: 50%;
+        width: 30%;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
 
     }
 
     nav ul {
-        gap: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        width: 10%;
+        height: 100%;
+        gap: 0.6rem;
+        position: relative;
+        right: 90%;
+
+    }
+
+    nav ul a {
+        font-size: 12px;
+
     }
 
     #about {
-        width: 40%;
-        height: 40vh;
+        width: 100% !important;
+        height: auto;
         font-size: 18px;
     }
 
     .im {
         width: 40%;
         height: 40vh;
+        display: none;
     }
 
     #education,
     #hob,
     #contact {
-        width: 90% !important;
+        width: 100% !important;
+        height: auto;
         float: none;
+        font-size: 18px;
         box-sizing: border-box;
-        margin: 0%;
+        margin-left: 0%;
+        margin-top: 5%;
+
+    }
+
+    #education {
+        margin-top: 0%;
+
     }
 
     #contact {
+        width: 100% !important;
+        height: auto;
         flex-direction: column;
         align-items: flex-start;
-        margin: 0%;
+        margin-top: 5%;
+        font-size: 12px;
         gap: 2rem;
 
     }
 
     #contact-form,
     .con {
+        font-size: 12px;
         width: 100% !important;
     }
 
     #hob ul {
+        font-size: 12px;
         flex-direction: column;
         gap: 1rem;
     }
 
     #skills {
-        width: 90% !important;
+        width: 100% !important;
+        margin-top: 5%;
+
         height: auto;
         float: none;
         margin-left: 5%;
+        font-size: 12px;
         box-sizing: border-box;
-        margin: 0%;
-
+        margin-left: 0%;
 
 
     }
 
     #projects {
-        width: 90% !important;
+        width: 100% !important;
+        margin-top: 5%;
+
         height: auto;
         float: none;
 
         margin-left: 5%;
+        font-size: 12px;
         box-sizing: border-box;
         margin: 0%;
 
     }
 
-    /* .sdl,
+    .sdl,
     .hsdl {
-        display: none;
-    } */
+        display: block;
+        overflow: hidden;
+    }
 
     .project-card {
+        font-size: 12px;
         width: 60%;
     }
 
     main {
         padding: 1rem;
+        font-size: 12px;
         margin: 0%;
 
     }
