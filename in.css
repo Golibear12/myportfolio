@@ -355,6 +355,13 @@ footer {
     color: #000000;
 }
 
+/* Hide Union section by default */
+#unon {
+    display: none;
+}
+
+
+
 @media screen and (max-width: 1508px) {
     header {
         width: 100%;
@@ -380,7 +387,7 @@ footer {
 
     #about {
         width: 40%;
-        height: 40vh;
+        height: auto;
         font-size: 18px;
     }
 
@@ -474,6 +481,8 @@ footer {
 
     }
 
+
+
     nav ul {
         width: 10%;
         height: 100%;
@@ -491,7 +500,7 @@ footer {
     #about {
         width: 100% !important;
         height: auto;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .im {
@@ -506,7 +515,7 @@ footer {
         width: 100% !important;
         height: auto;
         float: none;
-        font-size: 18px;
+        font-size: 14px;
         box-sizing: border-box;
         margin-left: 0%;
         margin-top: 5%;
@@ -524,19 +533,20 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         margin-top: 5%;
-        font-size: 12px;
+        font-size: 14px;
+
         gap: 2rem;
 
     }
 
     #contact-form,
     .con {
-        font-size: 12px;
+        font-size: 14px;
         width: 100% !important;
     }
 
     #hob ul {
-        font-size: 12px;
+        font-size: 14px;
         flex-direction: column;
         gap: 1rem;
     }
@@ -548,7 +558,7 @@ footer {
         height: auto;
         float: none;
         margin-left: 5%;
-        font-size: 12px;
+        font-size: 14px;
         box-sizing: border-box;
         margin-left: 0%;
 
@@ -563,7 +573,7 @@ footer {
         float: none;
 
         margin-left: 5%;
-        font-size: 12px;
+        font-size: 14px;
         box-sizing: border-box;
         margin: 0%;
 
@@ -571,18 +581,24 @@ footer {
 
     .sdl,
     .hsdl {
-        display: block;
-        overflow: hidden;
+        display: none;
     }
+
+
 
     .project-card {
         font-size: 12px;
-        width: 60%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: space-evenly;
+        margin-left: 5%;
     }
 
     main {
         padding: 1rem;
-        font-size: 12px;
+        font-size: 14px;
         margin: 0%;
 
     }

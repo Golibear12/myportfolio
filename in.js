@@ -204,37 +204,71 @@ let hobSliderInterval;
 
 function createHobSlider(n) {
     const hsdl = document.querySelector('.hsdl');
-    if (!hsdl) return;
-    // Animate old image out to the left
-    const oldImg = hsdl.querySelector('img');
-    if (oldImg) {
-        oldImg.style.transition = 'opacity 0.8s, transform 0.8s';
-        oldImg.style.opacity = '0';
-        oldImg.style.transform = 'translateX(-60px)';
+    const unionHsdl = document.querySelector('.union-hsdl');
+    if (hsdl) {
+        // Animate old image out to the left
+        const oldImg = hsdl.querySelector('img');
+        if (oldImg) {
+            oldImg.style.transition = 'opacity 0.8s, transform 0.8s';
+            oldImg.style.opacity = '0';
+            oldImg.style.transform = 'translateX(-60px)';
+            setTimeout(() => {
+                if (oldImg.parentNode) oldImg.parentNode.removeChild(oldImg);
+            }, 3000);
+        }
+        // Create new image coming from right
+        const img = document.createElement('img');
+        img.src = currentHobbyList[n % currentHobbyList.length];
+        img.alt = `Hobby Image ${n+1}`;
+        img.style.width = '99%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        img.style.opacity = '0';
+        img.style.borderRadius = '12px';
+        img.style.transform = 'translateX(60px)';
+        img.style.position = 'absolute';
+        img.style.left = '0';
+        img.style.top = '0';
+        img.style.transition = 'opacity 1.2s cubic-bezier(0.4,0,0.2,1), transform 1.2s cubic-bezier(0.4,0,0.2,1)';
+        hsdl.style.position = 'relative';
+        hsdl.appendChild(img);
         setTimeout(() => {
-            if (oldImg.parentNode) oldImg.parentNode.removeChild(oldImg);
-        }, 3000);
+            img.style.opacity = '1';
+            img.style.transform = 'translateX(0)';
+        }, 45);
     }
-    // Create new image coming from right
-    const img = document.createElement('img');
-    img.src = currentHobbyList[n % currentHobbyList.length];
-    img.alt = `Hobby Image ${n+1}`;
-    img.style.width = '99%';
-    img.style.height = '100%';
-    img.style.objectFit = 'cover';
-    img.style.opacity = '0';
-    img.style.borderRadius = '12px';
-    img.style.transform = 'translateX(60px)';
-    img.style.position = 'absolute';
-    img.style.left = '0';
-    img.style.top = '0';
-    img.style.transition = 'opacity 1.2s cubic-bezier(0.4,0,0.2,1), transform 1.2s cubic-bezier(0.4,0,0.2,1)';
-    hsdl.style.position = 'relative';
-    hsdl.appendChild(img);
-    setTimeout(() => {
-        img.style.opacity = '1';
-        img.style.transform = 'translateX(0)';
-    }, 45);
+    if (unionHsdl) {
+        // Animate old image out to the left
+        const oldImg = unionHsdl.querySelector('img');
+        if (oldImg) {
+            oldImg.style.transition = 'opacity 0.8s, transform 0.8s';
+            oldImg.style.opacity = '0';
+            oldImg.style.transform = 'translateX(-60px)';
+            setTimeout(() => {
+                if (oldImg.parentNode) oldImg.parentNode.removeChild(oldImg);
+            }, 3000);
+        }
+        // Create new image coming from right
+        const img2 = document.createElement('img');
+        img2.src = currentHobbyList[n % currentHobbyList.length];
+        img2.alt = `Union Image ${n+1}`;
+        img2.style.width = '99%';
+        img2.style.height = '100%';
+        img2.style.objectFit = 'cover';
+        img2.style.opacity = '0';
+        img2.style.borderRadius = '12px';
+        img2.style.transform = 'translateX(60px)';
+        img2.style.position = 'absolute';
+        img2.style.left = '0';
+        img2.style.top = '0';
+        img2.style.transition = 'opacity 1.2s cubic-bezier(0.4,0,0.2,1), transform 1.2s cubic-bezier(0.4,0,0.2,1)';
+        unionHsdl.style.position = 'relative';
+        unionHsdl.appendChild(img2);
+        setTimeout(() => {
+            img2.style.opacity = '1';
+            img2.style.transform = 'translateX(0)';
+        }, 45);
+    }
 }
 
 function startHobSlider() {
@@ -293,6 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
 
     // Contact form handler
     const form = document.getElementById('contact-form');
