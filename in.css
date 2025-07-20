@@ -503,62 +503,24 @@ footer {
     }
 
     .imo {
-        display: block;
-        width: 5%;
-        height: 40vh;
-        background-color: #ffffff;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
-        overflow: hidden;
-
+        width: 90%;
+        height: 300px;
+        margin-top: 5%;
         margin-bottom: 5%;
-        position: absolute;
-        top: 14%;
-        right: 5%;
-        transition: all 0.8s ease-in-out;
-
-    }
-
-    .e {
-        color: #232323;
-        font-size: 24px;
-
+        margin-left: 5%;
+        border-radius: 100%;
     }
 
     .imo img {
-        height: 100%;
-        transition: all 0.8s ease-in-out;
-        float: right;
-
-
-    }
-
-    .imo:hover {
-        display: flex;
-        width: 60%;
-        margin-bottom: 5%;
-        position: absolute;
-        background-color: none;
-        top: 14%;
-        right: 5%;
-        transition: all 0.8s ease-in-out;
-        background-color: #ffffff0e;
-
-
-    }
-
-    .imo:hover img {
-        display: flex;
-        width: 90%;
+        width: 50%;
         height: 100%;
         object-fit: cover;
+        border-radius: 8px;
         box-shadow: 0 2px 8px rgba(108, 99, 255, 0.1);
-        transition: all 0.8s ease-in-out;
-
-
+        transition: transform 0.3s;
+        border-radius: 12%;
     }
-
 
     nav ul {
         width: 10%;
