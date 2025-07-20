@@ -505,7 +505,7 @@ footer {
     .imo {
         display: block;
         width: 5%;
-        height: 29vh;
+        height: 40vh;
         background-color: #ffffff;
         display: flex;
         align-items: center;
@@ -514,7 +514,7 @@ footer {
 
         margin-bottom: 5%;
         position: absolute;
-        top: 10%;
+        top: 14%;
         right: 5%;
         transition: all 0.8s ease-in-out;
 
@@ -540,7 +540,7 @@ footer {
         margin-bottom: 5%;
         position: absolute;
         background-color: none;
-        top: 10%;
+        top: 14%;
         right: 5%;
         transition: all 0.8s ease-in-out;
         background-color: #ffffff0e;
