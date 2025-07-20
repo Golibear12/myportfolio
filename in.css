@@ -381,6 +381,7 @@ footer {
     #about {
         width: 40%;
         height: 40vh;
+        font-size: 18px;
     }
 
     .im {
