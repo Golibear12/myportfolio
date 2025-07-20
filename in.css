@@ -81,6 +81,13 @@ nav ul {
     width: 100%;
 }
 
+nav ul li {
+    gap: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 nav a {
     color: #dcdbdb;
     text-decoration: none;
@@ -385,6 +392,13 @@ footer {
         justify-content: space-evenly;
     }
 
+    nav ul li {
+        gap: 0.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
     #about {
         width: 40%;
         height: auto;
@@ -481,42 +495,66 @@ footer {
 
     }
 
+    nav ul li {
+        gap: 0.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
     .imo {
         display: block;
-        width: 10%;
-        height: 5vh;
-        background-color: #000000;
+        width: 5%;
+        height: 25vh;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        overflow: hidden;
 
         margin-bottom: 5%;
         position: absolute;
         top: 10%;
         right: 5%;
+        transition: all 0.8s ease-in-out;
+
+    }
+
+    .e {
+        color: #232323;
+        font-size: 24px;
+
     }
 
     .imo img {
-        display: none;
+        height: 100%;
+        transition: all 0.8s ease-in-out;
+        float: right;
+
+
     }
 
     .imo:hover {
-        display: block;
+        display: flex;
         width: 60%;
-        height: 20vh;
         margin-bottom: 5%;
         position: absolute;
         background-color: none;
         top: 10%;
         right: 5%;
+        transition: all 0.8s ease-in-out;
+        background-color: #ffffff0e;
+
 
     }
 
     .imo:hover img {
-        display: block;
-        width: 100%;
+        display: flex;
+        width: 90%;
         height: 100%;
         object-fit: cover;
-        border-radius: 8px;
         box-shadow: 0 2px 8px rgba(108, 99, 255, 0.1);
-        transition: transform 0.3s;
+        transition: all 0.8s ease-in-out;
 
 
     }

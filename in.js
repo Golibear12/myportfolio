@@ -1,12 +1,12 @@
 // Dynamic project data
 const projects = [
     {
-        title: "Academic",
+        title: "<i class="+"ri-book-3-line"+"></i>Academic",
         description: "rha rha hai",
         link: "../bang/colour.html"
     },
     {
-        title: "Website Project",
+        title: "<i class="+"ri-pages-fill"+"></i>Website Project",
         description: "||Modern||Websites||UxUi||",
         link: "#"
     }
