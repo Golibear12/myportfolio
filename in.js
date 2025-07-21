@@ -2,8 +2,8 @@
 const projects = [
     {
         title: "<i class="+"ri-book-3-line"+"></i>Academic",
-        description: "rha rha hai",
-        link: "../bang/colour.html"
+        description: "||Academics||Research & Projects||",
+        link: " https://golibear12.github.io/acadmic/"
     },
     {
         title: "<i class="+"ri-pages-fill"+"></i>Website Project",
@@ -308,10 +308,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hobby section color change (if needed)
     const color = {
-        'music':'rgb(7,14,27)',
-        'theater & drama':'rgb(170,83,39)',
-        'books reading':'rgb(28,54,196)',
-        'physical':'rgb(86,96,99)'
+        'music':'rgba(2, 5, 25, 0.87)',
+        'theater & drama':'rgba(171, 7, 23, 0.88)',
+        'books reading':'rgba(1, 142, 135, 0.87)',
+        'physical':'rgba(167, 72, 34, 0.88)'
     };
     const ht = document.getElementById('hob');
     const htl = document.querySelectorAll('#hob ul li');

@@ -415,6 +415,7 @@ footer {
     #contact {
         width: 90% !important;
         float: none;
+        font-size: 14px;
         box-sizing: border-box;
         margin-left: 5%;
     }
@@ -439,7 +440,7 @@ footer {
         width: 90% !important;
         height: auto;
         float: none;
-        font-size: 14px;
+        font-size: 12px;
         margin-left: 5%;
         box-sizing: border-box;
 
