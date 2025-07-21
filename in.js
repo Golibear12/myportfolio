@@ -23,7 +23,7 @@ function renderProjects() {
         card.innerHTML = `
             <h3>${project.title}</h3>
             <p>${project.description}</p>
-            <a href="${project.link}" target="_blank">View Project</a>
+            <a href="${project.link}" >View Project</a>
         `;
         // If first project, add click handler for modal
         if (idx === 1) {
