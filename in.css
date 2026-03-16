@@ -120,7 +120,6 @@ header {
     color: var(--text-primary);
     text-decoration: none;
     font-weight: 500;
-    transition: background 0.3s, color 0.3s;
 }
 
 #dropdown-menu a i {
@@ -133,10 +132,6 @@ header {
     color: var(--accent);
 }
 
-#dropdown-menu a:hover i {
-    color: var(--accent);
-}
-
 #dropdown-menu hr {
     border: 0;
     border-top: 1px solid var(--border-color);
@@ -144,7 +139,7 @@ header {
 }
 
 /* =========================================
-   3. LAYOUT & CARDS
+   3. LAYOUT & CARDS (Desktop)
    ========================================= */
 main {
     max-width: 1050px;
@@ -174,7 +169,7 @@ section h2 {
 }
 
 .card:hover {
-    transform: translateY(-0.162px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
     border-color: var(--accent);
 }
@@ -208,21 +203,39 @@ section h2 {
     max-width: 280px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid var(--card-bg);
+    border-radius: 16px;
+    /* Match square-ish wireframe */
+    border: 4px solid var(--card-bg);
     box-shadow: var(--shadow-soft);
 }
 
 /* =========================================
-   4. SCROLLERS & SLIDERS (Forced 2-Card)
+   4. SCROLLERS & SLIDERS (Desktop)
    ========================================= */
+.split-section {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.content-side {
+    flex: 1;
+    min-width: 0;
+}
+
+.image-side {
+    width: 40%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
 .horizontal-scroll {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
     padding-bottom: 1rem;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
     scrollbar-width: none;
 }
 
@@ -230,7 +243,6 @@ section h2 {
     display: none;
 }
 
-/* Calculates exactly 2 cards visible by taking 50% width minus half the gap */
 .horizontal-scroll .card {
     flex: 0 0 calc(50% - 0.5rem);
     scroll-snap-align: start;
@@ -245,26 +257,10 @@ section h2 {
     gap: 0.3rem;
 }
 
-.split-section {
-    display: flex;
-    gap: 1.5rem;
-    align-items: stretch;
-}
-
-.content-side {
-    flex: 1;
-    min-width: 0;
-}
-
-.image-side {
-    width: 40%;
-    min-width: 250px;
-}
-
 .img-slider-container {
     width: 100%;
     height: 100%;
-    min-height: 300px;
+    min-height: 350px;
     background: var(--accent-light);
     position: relative;
     border-radius: 12px;
@@ -284,30 +280,23 @@ section h2 {
 }
 
 /* =========================================
-   5. CONTACT GRID (Forced 2-Column)
+   5. CONTACT GRID
    ========================================= */
 .direct-contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Forces 2 columns even on mobile */
-    gap: 1rem;
+    gap: 1.5rem;
     background: transparent;
     box-shadow: none;
     border: none;
     padding: 0;
 }
 
-.direct-contact-grid:hover {
-    box-shadow: none;
-    transform: none;
-    border-color: transparent;
-}
-
 .contact-link {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    padding: 1rem;
+    gap: 1rem;
+    padding: 1.5rem;
     background: var(--card-bg);
     border-radius: 12px;
     text-decoration: none;
@@ -318,18 +307,12 @@ section h2 {
 }
 
 .contact-link i {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--accent);
 }
 
-.contact-link h4 {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.1rem;
-}
-
 .contact-link p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     margin: 0;
     word-break: break-all;
@@ -341,7 +324,7 @@ section h2 {
 .fade-in {
     opacity: 0;
     transform: translateY(15px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: 0.5s ease-out;
 }
 
 .fade-in.visible {
@@ -357,86 +340,130 @@ footer {
 }
 
 /* =========================================
-   7. ULTRA-RESPONSIVE COMPRESSION (The Magic)
-   This section shrinks elements so the layout doesn't break on phones.
+   7. WIREFRAME MOBILE LAYOUT (The Magic)
+   This forces the exact side-by-side drawing on phones.
    ========================================= */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
 
-    /* Stack the About section but keep the image a reasonable size */
-    #about.split-section {
-        flex-direction: column-reverse;
-    }
-
-    .profile-img {
-        max-width: 200px;
-    }
-
-    /* Keep Education slider and images stacked */
-    #education.split-section {
-        flex-direction: column;
-    }
-
-    .image-side {
-        width: 100%;
-        height: 250px;
-        min-height: 250px;
-    }
-}
-
-@media screen and (max-width: 300px) {
-
-    /* Shrink the outer padding so the content gets more screen space */
+    /* Compress outer spacing to maximize screen real estate */
     main {
         padding: 1rem 3%;
     }
 
     section {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
-    /* Shrink the header */
     header {
-        padding: 0.8rem 3%;
+        padding: 0.5rem 3%;
     }
 
     .logo {
         font-size: 1.2rem;
     }
 
-    .menu-btn {
-        font-size: 1.5rem;
-    }
-
-    /* Shrink text globally to fit the 2-column layouts */
+    /* Micro-typography */
     #about .title {
-        font-size: 2.2rem;
+        font-size: 1.6rem;
+        margin-bottom: 0.2rem;
     }
 
     section h2 {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p,
+    .meta,
+    .hint-text {
+        font-size: 0.75rem !important;
+        line-height: 1.4 !important;
     }
 
     .card {
-        padding: 1rem;
+        padding: 0.8rem;
+        border-radius: 8px;
     }
 
-    p {
-        font-size: 0.9rem !important;
-        line-height: 1.5 !important;
+    /* ROW 2: About Section (Text Left, Image Right) */
+    #about.split-section {
+        flex-direction: row;
+        /* Forces side-by-side */
+        gap: 0.8rem;
+        align-items: stretch;
     }
 
-    /* Keep 2 cards visible in the slider on mobile! */
+    #about .content-side {
+        flex: 0 0 55%;
+    }
+
+    #about .image-side {
+        flex: 0 0 40%;
+        min-width: unset;
+    }
+
+    .profile-img {
+        border-radius: 8px;
+        border-width: 2px;
+    }
+
+    /* ROW 3: Split Section (Stacked Cards Left, Slider Right) */
+    .split-section {
+        flex-direction: row;
+        /* Forces side-by-side */
+        gap: 0.8rem;
+    }
+
+    .content-side {
+        flex: 0 0 55%;
+    }
+
+    .image-side {
+        flex: 0 0 40%;
+        min-width: unset;
+    }
+
+    /* Force the cards to stack vertically on the left side */
+    .horizontal-scroll {
+        flex-direction: column;
+        /* Stack instead of scroll */
+        overflow-x: hidden;
+        gap: 0.5rem;
+        padding-bottom: 0;
+    }
+
     .horizontal-scroll .card {
-        flex: 0 0 calc(65% - 0.5rem);
-        /* Allows 1 full card and a strong 'peek' of the second */
+        flex: unset;
+        width: 100%;
+        /* Take full width of the left column */
     }
 
-    /* Contact grid stays 2 columns, but we stack the icon and text to save horizontal space */
+    .img-slider-container {
+        min-height: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    /* ROW 4: Contact links (2 side-by-side) */
+    .direct-contact-grid {
+        grid-template-columns: 1fr 1fr;
+        /* Force 2 columns */
+        gap: 0.8rem;
+    }
+
     .contact-link {
         flex-direction: column;
         text-align: center;
+        padding: 1rem 0.5rem;
         gap: 0.5rem;
-        padding: 0.8rem;
+    }
+
+    .contact-link i {
+        font-size: 1.5rem;
+    }
+
+    .contact-link p {
+        font-size: 0.75rem;
     }
 }
