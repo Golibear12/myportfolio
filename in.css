@@ -1,3 +1,6 @@
+/* =========================================
+   1. ROOT VARIABLES (Blue + White Theme)
+   ========================================= */
 :root {
     --bg-color: #F0F7FF;
     /* Ice Blue Background */
@@ -47,24 +50,25 @@ h4,
     color: var(--accent);
 }
 
-/* --- HEADER & THREE DOT MENU --- */
+/* =========================================
+   2. HEADER & THREE DOT MENU
+   ========================================= */
 header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     position: sticky;
     top: 0;
-    gap: 60%;
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
-    font-size: 40px;
-    letter-spacing: 3px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
     font-weight: 800;
 }
 
@@ -146,7 +150,9 @@ header {
     margin: 0.5rem 0;
 }
 
-/* --- LAYOUT & SECTIONS --- */
+/* =========================================
+   3. LAYOUT & CARDS
+   ========================================= */
 main {
     max-width: 1050px;
     margin: 0 auto;
@@ -175,7 +181,7 @@ section h2 {
 }
 
 .card:hover {
-    transform: translateY(-0.168px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
     border-color: var(--accent);
 }
@@ -197,7 +203,7 @@ section h2 {
     color: var(--text-secondary);
 }
 
-/* --- PROFILE IMAGE STYLING --- */
+/* Profile Image */
 .profile-img-container {
     display: flex;
     justify-content: center;
@@ -209,8 +215,7 @@ section h2 {
     max-width: 300px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 12%;
-    /* Perfect Circle */
+    border-radius: 50%;
     border: 6px solid var(--card-bg);
     box-shadow: var(--shadow-soft);
     transition: transform 0.3s ease;
@@ -221,7 +226,9 @@ section h2 {
     box-shadow: var(--shadow-hover);
 }
 
-/* --- HORIZONTAL SCROLL (Exact 2-Card Logic) --- */
+/* =========================================
+   4. SCROLLERS & SLIDERS
+   ========================================= */
 .horizontal-scroll {
     display: flex;
     gap: 1.5rem;
@@ -250,7 +257,6 @@ section h2 {
     gap: 0.3rem;
 }
 
-/* --- SPLIT SECTION (Education & Visual Slider) --- */
 .split-section {
     display: flex;
     gap: 2rem;
@@ -289,7 +295,9 @@ section h2 {
     border-radius: 12px;
 }
 
-/* --- DIRECT CONTACT LINK STYLING --- */
+/* =========================================
+   5. CONTACT GRID
+   ========================================= */
 .direct-contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -339,11 +347,13 @@ section h2 {
 
 .contact-link:hover {
     border-color: var(--accent);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
 }
 
-/* Animations */
+/* =========================================
+   6. ANIMATIONS & FOOTER
+   ========================================= */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -361,7 +371,11 @@ footer {
     color: var(--text-secondary);
 }
 
-/* Mobile Adjustments */
+/* =========================================
+   7. RESPONSIVE DESIGN (From Reference Code)
+   ========================================= */
+
+/* Tablets and Smaller Laptops */
 @media screen and (max-width: 850px) {
     .split-section {
         flex-direction: column;
@@ -369,24 +383,64 @@ footer {
 
     #about.split-section {
         flex-direction: column-reverse;
+        /* Profile Image goes ABOVE text */
     }
 
-    /* Moves image above text */
     .image-side {
         width: 100%;
         height: 300px;
     }
 
     .profile-img {
-        max-width: 220px;
-        margin-bottom: 1rem;
+        max-width: 250px;
+        margin-bottom: 1.5rem;
     }
 
+    /* Change 2-card slider to 1-card slider on tablets */
     .horizontal-scroll .card {
         flex: 0 0 100%;
     }
+}
 
-    .title {
-        font-size: 2.5rem !important;
+/* Mobile Phones */
+@media screen and (max-width: 500px) {
+    main {
+        padding: 1.5rem 5%;
+    }
+
+    header {
+        padding: 0.8rem 5%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    #about .title {
+        font-size: 2.2rem;
+        /* Make big text fit on small screens */
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-img {
+        max-width: 200px;
+        /* Smaller image for phones */
+    }
+
+    .img-slider-container {
+        min-height: 250px;
+        /* Shorter image slider */
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .direct-contact-grid {
+        grid-template-columns: 1fr;
+        /* Stack contact links vertically */
     }
 }
