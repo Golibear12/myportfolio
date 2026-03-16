@@ -174,7 +174,7 @@ section h2 {
 }
 
 .card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-0.162px);
     box-shadow: var(--shadow-hover);
     border-color: var(--accent);
 }
@@ -361,7 +361,7 @@ footer {
    This section shrinks elements so the layout doesn't break on phones.
    ========================================= */
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 700px) {
 
     /* Stack the About section but keep the image a reasonable size */
     #about.split-section {
@@ -384,7 +384,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 300px) {
 
     /* Shrink the outer padding so the content gets more screen space */
     main {
