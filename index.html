@@ -4,130 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>KUNAL | Portfolio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="in.css">
 </head>
 
 <body>
     <header>
-        <h1>KUNAL
-
-        </h1>
-        <nav>
-
-            <ul>
-                <li><i class="ri-user-fill"></i><a href="#about">About</a></li>
-                <li><i class="ri-hammer-fill"></i><a href="#projects">Projects</a></li>
-                <li><i class="ri-contacts-fill"></i><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="imo">
-        <img src="img/dp.jpg" alt="">
-    </div>
-    <main>
-        <div class="shma">
-            <section id="about" class="fade-in">
-                <div class="ab">
-                    <h2><i class="ri-cup-fill"></i>About Me</h2>
-                    <p>Multidisciplinary learner with a strong academic foundation in Physics and a Minor in Computer
-                        Science. I
-                        possess practical knowledge in scientific analysis, logical problem-solving, and computational
-                        tools
-                        such as Python, MySQL, and data handling libraries. My exposure to web technologies (HTML, CSS,
-                        JavaScript) and design tools reflects a creative and adaptable mindset. I thrive in dynamic
-                        environments
-                        where analytical thinking, cross-domain learning, and versatility are valued, and I aim to apply
-                        my
-                        broad skill set to innovative and impactful projects across varied domains.</p>
-                </div>
-            </section>
-            <div class="im"><img src="img/dp.jpg" alt=""></div>
-        </div>
-
-        <section id="education" class="fade-in">
-            <div class="ed">
-                <h1><i class="ri-book-open-fill"></i>Education</h1>
-                <ul style="list-style:none; padding:0;">
-                    <li><strong>BSc (Hons) in Physics (Pursuing)</strong><br>Kirori Mal College, University of Delhi
-                    </li>
-                    <li><strong>Minor in Computer Science (Pursuing)</strong><br>Kirori Mal College, University of Delhi
-                    </li>
-                </ul>
-                <h3><i class="ri-book-open-fill"></i>Certifications</h3>
-                <ul style="list-style:none; padding:0;">
-                    <li><strong>Certification in web development</strong><br>C-Tech Institute – 2024</li>
-                </ul>
-            </div>
-            <div class="sdl"></div>
-        </section>
-        <section id="skills" class="fade-in">
-            <h2><i class="ri-tools-fill"></i>Skills &amp; Abilities</h2>
-            <ul style="list-style:none; padding:0;">
-                <li><strong><i class="ri-database-2-fill"></i>Backend &amp; Database:</strong> Python, NumPy,
-                    Matplotlib, Pandas, MySQL</li>
-                <br>
-                <li><strong><i class="ri-bring-to-front"></i>Frontend:</strong> HTML, CSS, JavaScript, GSAP, Three.js,
-                    React.js (Basic), Locomotive
-                    Scroll</li>
-                <br>
-                <li><strong><i class="ri-github-fill"></i>Version Control:</strong> Git, GitHub</li>
-                <br>
-                <li><strong><i class="ri-palette-fill"></i>Design &amp; Tools:</strong> Canva, MS Office (Basic), Online
-                    Tools, SEO Optimization</li>
-                <br>
-                <li><strong><i class="ri-shapes-fill"></i>Other Skills:</strong> Responsive Design, Animation, UI/UX,
-                    Pattern Analysis,Colour
-                    theory</li>
-
-            </ul>
-        </section>
-        <section id="projects" class="fade-in">
-            <h2><i class="ri-hammer-fill"></i>Projects</h2>
-            <div id="project-list"></div>
-        </section>
-        <section id="hob" class="fade-in">
-            <div class="ho">
-                <h1><i class="ri-edit-2-fill"></i>Hobbies</h1>
-                <ul style="list-style:none; padding:0;">
-                    <li><i class="ri-music-2-fill eh"></i><a href="">Music</a></li>
-                    <li><i class="ri-emotion-sad-fill"></i><a href="">Theater &amp; drama</a></li>
-                    <li><i class="ri-book-shelf-fill"></i><a href="">Books Reading</a></li>
-                    <li><i class="ri-basketball-fill"></i><a href="">Physical</a></li>
-                </ul>
-            </div>
-            <div class="hsdl"></div>
-        </section>
-        <section id="contact" class="fade-in">
-
-            <div class="con">
+        <div class="logo">KUNAL</div>
+        <div class="menu-container">
+            <button class="menu-btn" id="menu-toggle"><i class="ri-more-2-fill"></i></button>
+            <nav id="dropdown-menu">
                 <ul>
-                    <li><i class="ri-mail-fill"></i> <a href="kunalgh45@gmail.com">kunalgh45@gmail.com</a></li>
-                    <li><i class="ri-linkedin-fill"></i> <a
-                            href="www.linkedin.com/in/kunal-raj ">www.linkedin.com/in/kunal-raj </a></li>
-                    <li><i class="ri-whatsapp-fill"></i> <a href="">+19 8929154422</a></li>
-                    <li><i class="ri-github-fill"></i> <a
-                            href="https://github.com/Golibear12">https://github.com/Golibear12</a></li>
+                    <li><a href="#about"><i class="ri-user-smile-line"></i> About</a></li>
+                    <li><a href="#education"><i class="ri-book-open-line"></i> Education</a></li>
+                    <li><a href="#skills"><i class="ri-tools-line"></i> Skills</a></li>
+                    <li><a href="#projects"><i class="ri-hammer-line"></i> Projects</a></li>
+                    <hr>
+                    <li><a href="Resume.pdf" download><i class="ri-download-line"></i> Download Resume</a></li>
+                    <li><a href="https://github.com/Golibear12" target="_blank"><i class="ri-github-fill"></i>
+                            GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/kunal-6a5b7a355" target="_blank"><i
+                                class="ri-linkedin-box-line"></i> LinkedIn</a></li>
                 </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="fade-in split-section" style="margin-top: 5vh; align-items: center;">
+            <div class="content-side">
+                <h1 class="title">About <span class="accent-text">Me</span></h1>
+                <p class="subtitle"><i class="ri-map-pin-2-line"></i> Delhi, India</p>
+                <div class="card" style="margin-top: 2rem;">
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        I am a versatile undergraduate blending a strong Physics and Computer Science foundation with
+                        marketing analytics. I thrive in dynamic environments where analytical thinking, cross-domain
+                        learning, and computational tools intersect to build innovative, data-driven solutions.
+                    </p>
+                </div>
             </div>
-            <form id="contact-form">
-                <h2><i class="ri-contacts-fill"></i>Contact</h2>
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-            <div id="form-status"></div>
+            <div class="image-side profile-img-container">
+                <img src="img/dp.jpg" alt="Kunal - Profile Picture" class="profile-img">
+            </div>
+        </section>
+
+        <section id="education" class="fade-in split-section">
+            <div class="content-side">
+                <h2><i class="ri-book-open-line"></i> Education & Achievements</h2>
+                <div id="edu-list" class="horizontal-scroll"></div>
+            </div>
+            <div class="image-side">
+                <div class="img-slider-container" id="visual-slider">
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="fade-in">
+            <h2><i class="ri-tools-line"></i> Skills & Abilities</h2>
+            <p class="hint-text">Swipe to see more <i class="ri-arrow-right-line"></i></p>
+            <div id="skill-list" class="horizontal-scroll"></div>
+        </section>
+
+        <section id="projects" class="fade-in">
+            <h2><i class="ri-hammer-line"></i> Projects</h2>
+            <p class="hint-text">Swipe to see more <i class="ri-arrow-right-line"></i></p>
+            <div id="project-list" class="horizontal-scroll"></div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h2><i class="ri-links-line"></i> Contact</h2>
+            <div class="card direct-contact-grid">
+                <a href="mailto:kunalgh45@gmail.com" class="contact-link">
+                    <i class="ri-mail-send-line"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>kunalgh45@gmail.com</p>
+                    </div>
+                </a>
+                <a href="tel:+918929154422" class="contact-link">
+                    <i class="ri-phone-line"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 8929154422</p>
+                    </div>
+                </a>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 My Portfolio</p>
+        <p>&copy; 2026 Kunal. Powered by Logic and Code.</p>
     </footer>
-    <link rel="stylesheet" href="in.css">
+
     <script src="in.js"></script>
 </body>
 
