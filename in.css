@@ -365,20 +365,30 @@ footer {
 
     /* Micro-typography */
     #about .title {
-        font-size: 1.6rem;
-        margin-bottom: 0.2rem;
+        font-size: 1.95rem;
+        margin-bottom: 0.35rem;
+        font-weight: 700;
+    }
+
+    #about .subtitle {
+        font-size: 1.05rem;
+        font-weight: 500;
     }
 
     section h2 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         margin-bottom: 0.5rem;
+        font-weight: 700;
     }
 
     p,
     .meta,
-    .hint-text {
-        font-size: 0.75rem !important;
-        line-height: 1.4 !important;
+    .hint-text,
+    .card h3,
+    .card p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        font-weight: 500;
     }
 
     .card {
@@ -404,14 +414,15 @@ footer {
     }
 
     .profile-img {
+        width: 180px;
+        height: 220px;
         border-radius: 8px;
         border-width: 2px;
     }
 
-    /* ROW 3: Split Section (Stacked Cards Left, Slider Right) */
+    /* ROW 3: Split Section (Left text + right image) */
     .split-section {
         flex-direction: row;
-        /* Forces side-by-side */
         gap: 0.8rem;
     }
 
@@ -424,31 +435,32 @@ footer {
         min-width: unset;
     }
 
-    /* Force the cards to stack vertically on the left side */
+    /* Scroller containers keep horizontal swipe and show two cards at once on mobile */
     .horizontal-scroll {
-        flex-direction: column;
-        /* Stack instead of scroll */
-        overflow-x: hidden;
-        gap: 0.5rem;
-        padding-bottom: 0;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 0.6rem;
+        padding-bottom: 0.5rem;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
     }
 
     .horizontal-scroll .card {
-        flex: unset;
-        width: 100%;
-        /* Take full width of the left column */
+        flex: 0 0 calc(50% - 0.5rem);
+        min-width: calc(50% - 0.5rem);
+        scroll-snap-align: start;
     }
 
     .img-slider-container {
-        min-height: 100%;
-        height: 100%;
-        border-radius: 8px;
+        min-height: 280px;
+        max-height: 320px;
+        height: auto;
+        border-radius: 4px;
     }
 
     /* ROW 4: Contact links (2 side-by-side) */
     .direct-contact-grid {
         grid-template-columns: 1fr 1fr;
-        /* Force 2 columns */
         gap: 0.8rem;
     }
 
