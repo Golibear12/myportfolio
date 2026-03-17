@@ -42,8 +42,6 @@ const projectsData = [
 ];
 
 const sliderImages = [
-    'img/kmc.jpg',
-    'img/kmc1.jpg',
     'img/kirorimal.jpg',
     'img/Kirorimal1.jpg'
 ];
