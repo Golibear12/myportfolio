@@ -12,33 +12,41 @@ const educationData = [
 ];
 
 const skillsData = [
-    { 
-        icon: "ri-window-line", 
-        title: "Frontend Development", 
-        items: ["HTML, CSS, JavaScript", "GSAP, Three.js, React.js", "Locomotive Scroll"]
-    },
-    { 
-        icon: "ri-database-2-line", 
-        title: "Backend & Database", 
-        items: ["Python, NumPy, Matplotlib", "Pandas", "MySQL, DBMS"]
-    },
+    
     { 
         icon: "ri-lightbulb-flash-line", 
         title: "Soft Skills", 
         items: ["Analytical Thinking, Problem-Solving", "Adaptability, Collaboration", "Originality, Detail-Oriented"]
     },
     { 
+        icon: "ri-database-2-line", 
+        title: "Backend & Database", 
+        items: ["Python, NumPy, Matplotlib", "Pandas", "MySQL, DBMS"]
+    },
+    
+    { 
+        icon: "ri-window-line", 
+        title: "Frontend Development", 
+        items: ["HTML, CSS, JavaScript", "jQuery & JSON, GSAP", "Locomotive Scroll"]
+    },
+    
+    { 
         icon: "ri-pencil-ruler-2-line", 
         title: "Design & Tools", 
-        items: ["Responsive Design, UI/UX", "Pattern Analysis, Colour theory", "SEO Optimization", "Git, GitHub"]
+        items: ["Responsive Design", "Pattern Analysis, Colour theory", "Canva"]
+    },
+    {
+        icon:"ri-coreos-fill",
+        title:"Developer Tools",
+        items:["VS code", "Git, GitHub"]
     }
 ];
 
 const projectsData = [
-    { title: "Lazarev Clone", desc: "Animated portfolio clone with GSAP.", link: "https://golibear12.github.io/lazarev./" },
     { title: "Burger King UI", desc: "A clean, responsive one-page demo.", link: "https://golibear12.github.io/burgerking/" },
+    {title: "Logic-Based Token Operator Engine",desc: "A native JavaScript engine that treats system elements as tokens, processing them through a strict set of conditional logical rules. The script calculates how conflicting tokens eliminate or upgrade each other through deterministic clashes, dynamically updating the HTML interface to reveal the final stable state.",link:"https://golibear12.github.io/LogicOperatorK3G/"},
     { title: "Pnalisam Animation", desc: "Futuristic web project with scroll effects.", link: "https://golibear12.github.io/Pnalisam/" },
-    { title: "Bulibuli Game", desc: "Endless mining-themed web game.", link: "https://golibear12.github.io/Bulibuli/" }
+    {title:"<i class=ri-seedling-line></i> See git for more..",desc:"",link:"https://github.com/Golibear12"}
 ];
 
 const sliderImages = [
